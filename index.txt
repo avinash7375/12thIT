@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<title>Shriniwas Bagarka College</title>
+<meta charset="utf-8">
+<meta name="description" content="Shriniwas Bagarka Website."> <meta name="keywords" content="Bagarka, Andheri, College Website, Shriniwas bagarka College">
+<style>
+h1
+{
+background-color:#a72408;
+color:white;
+font-family:comic sans ms;
+border-radius: 25px;
+} 
+img
+{
+border:4px solid darkblue;
+}
+</style>
+</head>
+<body bgcolor="skyblue">
+<h1 align="center">Shriniwas Bagarka College</h1>
+<p>
+<b>
+<u>SBC Jr. College</u></b> is affiliated to Maharashtra State Board of Secondary & Higher Secondary Education, Pune.It is one of the best leading college in Ratnagiri district. It is an ISO 9001-2000 Certified School.</p>
+<br>
+<i>In the year June 2006 Jr. College Commerce stream started.</i>
+<br>
+<p>Our promise is to bring the best educational facilities to our students by maintaining a sharp focus on thepursuit of knowledge and skills.</p>
+<mark>Construction of hightech Information Technology Lab.</mark>
+<br>
+<br>
+<center>
+Put here Image
+<br>
+<a href="form.html">Click to fill feedback form</a>
+</center>
+</body>
+</html>
