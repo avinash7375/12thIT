@@ -1,0 +1,17 @@
+body{
+background-color: #f2f3f4; 
+color:brown;
+font-size:25px;
+font-family:calibri;
+}
+
+h1{
+color:blue;
+font-style:oblique;
+font-family:Arial Rounded MT;
+}
+
+table{
+border-radius:10px;
+border:1px maroon inset;
+}
