@@ -1,0 +1,63 @@
+<!--
+<!DOCTYPE html>
+
+
+Create event driven JavaScript program to convert temperature to and
+from Celsius, Fahrenheit.
+	Formula: c/5= (f-32)/9
+	[where c=Temperature in Celsius and f=Temperature in Fahrenheit.]
+	Output format : 40 Celsius=104 Fahrenheit
+	45 Fahrenheit = 7.22222222 Celsius
+
+
+<html>
+
+<head>
+<title>Celsius to Fahrenheit</title>
+<script src="script5.js"></script>
+</head>
+<body style="background-color: black; color: cyan;">
+<form>
+<label for="temp">Input Temperature Celsius to Fahrenheit : </label>
+<input type="number" id="temp" name="temp">
+<br><br>
+<input type="submit" onclick="celsiusFahrenheit()" value="submit">
+
+</form>
+<p>
+Celsius 	: <p id="toFahr"></p>
+Fahrenheit 	: <a id="toCels"></p>
+</p>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Temperature Converter</title>
+</head>
+<body style="background-color: black; color: cyan;">
+  <h1>Temperature Converter</h1>
+  <label for="celsius">Enter Celsius:</label>
+  <input type="number" id="celsius" onchange="convertCtoF()"> <br><br>
+  <label for="fahrenheit">Enter Fahrenheit:</label>
+  <input type="number" id="fahrenheit" onchange="convertFtoC()"> <br><br>
+  <p id="result"></p>
+
+  <script>
+    function convertCtoF() {
+      let celsius = parseFloat(document.getElementById("celsius").value);
+      let fahrenheit = (celsius * 9/5) + 32;
+      document.getElementById("result").innerHTML = `${celsius}°C = ${fahrenheit.toFixed(2)}°F`;
+    }
+
+    function convertFtoC() {
+      let fahrenheit = parseFloat(document.getElementById("fahrenheit").value);
+      let celsius = (fahrenheit - 32) * 5/9;
+      document.getElementById("result").innerHTML = `${fahrenheit}°F = ${celsius.toFixed(2)}°C`;
+    }
+  </script>
+</body>
+</html>
+
