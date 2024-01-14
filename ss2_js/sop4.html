@@ -1,0 +1,44 @@
+<!--
+
+Create event driven JavaScript program for the following. Make use of
+appropriate variables, JavaScript inbuilt string functions and control
+structures.
+-To accept string from user and reverse the given string and check whether
+it is palindrome or not
+
+-->
+
+<html>
+
+<head>
+	<title>Reverse String</title>
+</head>
+<body style="background-color: black; color: cyan;">
+<form>
+<label for="str1">Enter string to reverse : </label>
+<input type="text" id="str1" name="str1"><br><br>
+<input onclick="reverse()" type=submit value=submit>
+</form>
+<p>Reversed String: <p id="reversed"></p></p>
+
+<script>
+function reverse() {
+  let str = document.getElementById("str1").value;
+  // Create an empty string to store the reversed characters
+  let reversed = "";
+
+  // Iterate through the original string in reverse order
+  for (let i = str.length - 1; i >= 0; i--) {
+    // Append each character to the reversed string
+    reversed += str[i];
+  }
+
+  // Return the reversed string
+  let v = reversed;
+  document.getElementById("reversed").innerHTML = v;
+}
+</script>
+</body>
+
+
+</html>

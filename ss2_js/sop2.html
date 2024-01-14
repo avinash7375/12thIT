@@ -1,0 +1,74 @@
+<!--
+
+Create JavaScript program for the following form validations. Make
+use of HTML5 properties to do the following validations :
+1) Name, address, contact number and email are required fields of the
+form.
+2) Address field should show the hint value which will disappear when
+field gets focus or key press event.
+3) Telephone number should be maximum 10 digit number only.
+4) Email field should contain valid email address, @ should appear only
+once and not at the beginning or at end. It must contain at least one
+dot(.).
+5) Make use of pattern attribute for email to accept lowercase, uppercase
+alphabets, digits and specified symbols
+
+-->
+<html>
+<head>
+<title>
+Submission Form
+</title>
+
+</head>
+<body style="background-color: black; color: cyan;">
+<form id="myForm" onsubmit=validateForm()>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="address">Address:</label>
+  <input type="text" id="address" name="address" required> <br><br>
+
+  <label for="contact">Contact Number:</label>
+  <input type="tel" id="contact" name="contact" maxlength="10" required><br><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required
+       pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"><br><br>
+
+  <input type="submit" value="Submit">
+
+
+</form>
+<p>Hell :
+<span id="hell"></span>
+</p>
+
+<script>
+function validateForm() {
+  const name = String(document.getElementById("name").value);
+  const address = String(document.getElementById("address").value);
+  const contact = Number(document.getElementById("contact").value);
+  const email = document.getElementById("email").value;
+
+  // Additional email validation
+  const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  if (name === "" || address === "" || contact === "" || email === "") {
+    alert("Please fill in all required fields.");
+    return false;
+  } else if (contact.length > 10) {
+    alert("Contact number should be maximum 10 digits.");
+    return false;
+  } else if (!validEmail) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+document.getElementById("hell").textContent = name;
+  return true;
+}
+
+</script>
+</body>
+
+</html>
