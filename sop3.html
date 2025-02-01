@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Vowel Counter</h2>
+        <input type="text" id="inputString" placeholder="Enter a string" />
+        <button onclick="countVowels()">Count Vowels</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // Function to count vowels in a string
+        function countVowels() {
+            // Get the input string from the input field
+            const inputString = document.getElementById('inputString').value;
+            
+            // Convert string to lowercase to handle both upper and lowercase vowels
+            const lowercaseString = inputString.toLowerCase();
+            
+            // Initialize vowel count
+            let vowelCount = 0;
+            
+            // Define vowels array
+            const vowels = ['a', 'e', 'i', 'o', 'u'];
+            
+            // Loop through each character in the string
+            for (let char of lowercaseString) {
+                // Check if the character is a vowel
+                if (vowels.includes(char)) {
+                    vowelCount++;
+                }
+            }
+            
+            // Get the result element
+            const resultElement = document.getElementById('result');
+            
+            // Display the result with detailed information
+            if (inputString.length === 0) {
+                resultElement.innerHTML = "Please enter a string!";
+            } else {
+                resultElement.innerHTML = `
+                    Original string: "${inputString}"<br>
+                    Number of vowels: ${vowelCount}<br>
+                    Percentage of vowels: ${((vowelCount / inputString.length) * 100).toFixed(1)}%
+                `;
+            }
+        }
+
+        // Add event listener for Enter key
+        document.getElementById('inputString').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                countVowels();
+            }
+        });
+    </script>
+</body>
+</html>
