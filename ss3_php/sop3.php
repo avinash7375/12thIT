@@ -13,8 +13,11 @@ associative array.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array Operations</title>
+    <link src="sop3.php">
 </head>
 <body>
+</body>
+</html>
 
 <?php
 // Sample associative array
@@ -63,6 +66,3 @@ deleteElementAtIndex($sampleArray, $indexToDelete);
 // Display the array after deletion
 displayArray($sampleArray);
 ?>
-
-</body>
-</html>
